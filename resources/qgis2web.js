@@ -7,12 +7,12 @@ var map = new ol.Map({
         constrainResolution: false,
         maxZoom: 28,
         minZoom: 1,
-        
+        extent: [-1903968.876558, 2364581.207624, -111141.049323, 4289954.807330],
     })
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([-2180416.952759, 2318152.510390, 209516.902325, 4340536.548237], map.getSize());
+map.getView().fit([-1903968.876558, 2364581.207624, -111141.049323, 4289954.807330], map.getSize());
 
 //change cursor
 function pointerOnFeature(evt) {
@@ -497,6 +497,17 @@ var bottomRightContainerDiv = document.getElementById('bottom-right-container')
 
 //title
 
+var Title = new ol.control.Control({
+    element: (() => {
+        var titleElement = document.createElement('div');
+        titleElement.className = 'top-left-title ol-control';
+        titleElement.innerHTML = '<h2 class="project-title">Areoport- Maroc</h2>';
+        return titleElement;
+    })(),
+    target: 'top-left-container'
+});
+map.addControl(Title)
+    
 //abstract
 
 

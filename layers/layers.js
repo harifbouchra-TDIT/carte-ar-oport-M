@@ -60,7 +60,7 @@ lyr_Regions_MAR_1.set('fieldImages', {'OBJECTID': '', 'CODE_REGIO': '', 'Nom_Reg
 lyr_Aearoports_MAR_2.set('fieldImages', {'Nom_fr': 'TextEdit', 'Nom_ar': 'TextEdit', 'iata': 'TextEdit', });
 lyr_Limites_MAR_0.set('fieldLabels', {'OBJECTID': 'no label', });
 lyr_Regions_MAR_1.set('fieldLabels', {'OBJECTID': 'no label', 'CODE_REGIO': 'no label', 'Nom_Region': 'no label', 'Population': 'no label', 'Menages': 'no label', 'Etrangers': 'no label', 'Marocains': 'no label', 'Non_ar': 'no label', });
-lyr_Aearoports_MAR_2.set('fieldLabels', {'Nom_fr': 'no label', 'Nom_ar': 'no label', 'iata': 'no label', });
+lyr_Aearoports_MAR_2.set('fieldLabels', {'Nom_fr': 'inline label - always visible', 'Nom_ar': 'no label', 'iata': 'no label', });
 lyr_Aearoports_MAR_2.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
